@@ -187,8 +187,8 @@ viii.          	(2) In particular and without prejudice to the generality of the
         const sub = parseInt(Math.random() * SubjectLine.length);
         const Oline = parseInt(Math.random() * OpeningLine.length);
         const Eline = parseInt(Math.random() * EndingLine.length);
-        const body = `${OpeningLine[Oline]}%0A%0ASub: ${SubjectLine[sub]}%0A%0A${BodyOfEmail}%0A${EndingLine[Eline]}`;
-
+        // const body = `${OpeningLine[Oline]}%0A%0ASub: ${SubjectLine[sub]}%0A%0A${BodyOfEmail}%0A${EndingLine[Eline]}`;
+        const body = `${BodyOfEmail}%0A${EndingLine[Eline]}`;
         const message = `mailto:${to}?cc=${cc}&bcc=${bcc}&subject=${SubjectLine[sub]}&body=${body}`;
 
         location.href = message;
